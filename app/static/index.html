@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EntroGraph AI — graph-native investigation console</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<header>
+  <div class="brand"><span class="logo">◉</span> EntroGraph AI <small>Graph Hacks 2026 · Track 01</small></div>
+  <div id="health" class="pill">connecting…</div>
+</header>
+<nav id="nav">
+  <button data-view="overview" class="active">Overview</button>
+  <button data-view="challenge">Hidden Connection Challenge</button>
+  <button data-view="investigate">Investigate</button>
+  <button data-view="explorer">Graph Explorer</button>
+  <button data-view="timeline">Timeline</button>
+  <button data-view="memory">Memory</button>
+  <button data-view="evaluation">Evaluation</button>
+  <button data-view="ingest">Ingest &amp; Reset</button>
+</nav>
+<div class="banner">Synthetic data only. Scores are risk <b>assessments</b> to prioritise human review — never proof of fraud. A shared IP or device is not wrongdoing.</div>
+<main>
+  <section id="view-overview" class="view active"></section>
+
+  <section id="view-challenge" class="view">
+    <h2>Hidden Connection Challenge <small>under 3 minutes</small></h2>
+    <p id="challenge-story" class="muted"></p>
+    <ol class="steps" id="steps">
+      <li><button id="ch-1">1 · Reset &amp; load scenario</button><span>Fresh synthetic graph in FalkorDB.</span></li>
+      <li><button id="ch-2" disabled>2 · Investigate A1 (initial event)</button><span>Agent traverses the graph and saves memory.</span></li>
+      <li><button id="ch-3" disabled>3 · Compare with isolated baseline</button><span>Same customer, same threshold, no graph.</span></li>
+      <li><button id="ch-4" disabled>4 · Add new event</button><span>Dormant account D1 appears on device X.</span></li>
+      <li><button id="ch-5" disabled>5 · Re-investigate A1</button><span>What changed, and why.</span></li>
+      <li><button id="ch-6" disabled>6 · Restart backend</button><span>Drops connection &amp; caches, reconnects.</span></li>
+      <li><button id="ch-7" disabled>7 · Retrieve memory</button><span>Earlier investigations come back from FalkorDB.</span></li>
+    </ol>
+    <div class="grid2">
+      <div><div id="ch-graph" class="cy"></div><div id="ch-paths" class="muted small"></div></div>
+      <div id="ch-out"></div>
+    </div>
+  </section>
+
+  <section id="view-investigate" class="view">
+    <h2>Customer investigation</h2>
+    <div class="toolbar">
+      <select id="inv-customer"></select>
+      <label>Customer hops <select id="inv-hops"><option>0</option><option>1</option><option selected>2</option><option>3</option></select></label>
+      <label><input type="checkbox" id="inv-persist" checked> save to memory</label>
+      <button id="inv-run" class="primary">Investigate</button>
+    </div>
+    <div id="inv-out"></div>
+  </section>
+
+  <section id="view-explorer" class="view">
+    <h2>Interactive graph explorer <small>nodes and edges come from FalkorDB queries</small></h2>
+    <div class="toolbar">
+      <select id="ex-customer"></select>
+      <label>Hops <select id="ex-hops"><option>1</option><option selected>2</option><option>3</option></select></label>
+      <label><input type="checkbox" id="ex-sessions" checked> sessions</label>
+      <label><input type="checkbox" id="ex-commerce" checked> coupons</label>
+      <label><input type="checkbox" id="ex-memory" checked> memory</label>
+      <button id="ex-run" class="primary">Load graph</button>
+    </div>
+    <div class="grid2">
+      <div><div id="ex-graph" class="cy tall"></div><div class="legend" id="legend"></div></div>
+      <div><h3>Selected node</h3><pre id="ex-node" class="box">click a node</pre><h3>Discovered paths</h3><div id="ex-paths"></div></div>
+    </div>
+  </section>
+
+  <section id="view-timeline" class="view">
+    <h2>Evidence &amp; event timeline</h2>
+    <div class="toolbar"><select id="tl-customer"></select><label><input type="checkbox" id="tl-linked" checked> include linked accounts</label>
+      <button id="tl-run" class="primary">Load timeline</button></div>
+    <div id="tl-out"></div>
+  </section>
+
+  <section id="view-memory" class="view">
+    <h2>Persistent investigation memory <small>stored as Investigation / Finding nodes in FalkorDB</small></h2>
+    <div class="toolbar"><button id="mem-refresh">Refresh</button><button id="mem-restart">Simulate backend restart</button></div>
+    <div class="grid2"><div id="mem-list"></div><div id="mem-detail"><p class="muted">Select an investigation.</p></div></div>
+  </section>
+
+  <section id="view-evaluation" class="view">
+    <h2>Baseline comparison &amp; evaluation</h2>
+    <div class="toolbar"><button id="ev-run" class="primary">Run evaluation now</button><span class="muted small" id="ev-note"></span></div>
+    <div id="ev-out"></div>
+  </section>
+
+  <section id="view-ingest" class="view">
+    <h2>Synthetic event ingestion &amp; scenario reset</h2>
+    <div class="grid2">
+      <form id="ing-form" class="box">
+        <h3>New event</h3>
+        <label>Customer id<input name="customer_id" required value="D1"></label>
+        <label>Type<select name="type"><option>view</option><option>add_to_cart</option><option selected>purchase</option></select></label>
+        <label>Category<select name="category" id="ing-cat"></select></label>
+        <label>Device id<input name="device_id" required value="DEV-X"></label>
+        <label>Device kind<select name="device_kind"><option>phone</option><option>laptop</option><option>tablet</option><option>smart_tv</option><option>kiosk</option></select></label>
+        <label>IP id<input name="ip_id" required value="IP-R1MOB"></label>
+        <label>Network type<select name="network_type"><option>residential</option><option selected>mobile_carrier</option><option>public_wifi</option><option>corporate_nat</option></select></label>
+        <label>Amount<input name="amount" type="number" step="0.01" value="100"></label>
+        <label>Coupon<input name="coupon" value="NEWUSER50"></label>
+        <div class="toolbar"><button class="primary" type="submit">Ingest event</button></div>
+      </form>
+      <div><div class="box"><h3>Scenario</h3><p class="muted small">Deletes the graph (including investigation memory) and reloads the deterministic synthetic scenario.</p>
+        <button id="reset-btn" class="danger">Reset scenario</button></div><pre id="ing-out" class="box"></pre></div>
+    </div>
+  </section>
+</main>
+<div id="toast" class="toast"></div>
+<script src="/static/vendor/cytoscape.min.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>

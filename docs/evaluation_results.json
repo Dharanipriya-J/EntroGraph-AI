@@ -1,0 +1,2144 @@
+{
+  "scenario": "default-v1",
+  "n_cases": 42,
+  "n_positive": 8,
+  "n_negative": 34,
+  "flag_threshold": 50.0,
+  "config_version": "61c2f7b04c",
+  "methods": {
+    "isolated_baseline": {
+      "description": "Target's own events only: entropy-shift, drift, new device, coupon (scaled 0-100). No traversal, no profile, no memory.",
+      "tp": 8,
+      "fp": 4,
+      "fn": 0,
+      "tn": 30,
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "false_positive_rate": 0.1176,
+      "roc_auc": 0.9779,
+      "false_positives_by_group": {
+        "legit_drift": 4
+      },
+      "latency_ms_mean": 4.21,
+      "latency_ms_p95": 5.04,
+      "per_case": [
+        {
+          "customer_id": "N01",
+          "group": "normal",
+          "label": 0,
+          "score": 11.65,
+          "flagged": false
+        },
+        {
+          "customer_id": "N02",
+          "group": "normal",
+          "label": 0,
+          "score": 4.12,
+          "flagged": false
+        },
+        {
+          "customer_id": "N03",
+          "group": "normal",
+          "label": 0,
+          "score": 22.17,
+          "flagged": false
+        },
+        {
+          "customer_id": "N04",
+          "group": "normal",
+          "label": 0,
+          "score": 13.32,
+          "flagged": false
+        },
+        {
+          "customer_id": "N05",
+          "group": "normal",
+          "label": 0,
+          "score": 9.53,
+          "flagged": false
+        },
+        {
+          "customer_id": "N06",
+          "group": "normal",
+          "label": 0,
+          "score": 11.4,
+          "flagged": false
+        },
+        {
+          "customer_id": "N07",
+          "group": "normal",
+          "label": 0,
+          "score": 27.52,
+          "flagged": false
+        },
+        {
+          "customer_id": "N08",
+          "group": "normal",
+          "label": 0,
+          "score": 8.3,
+          "flagged": false
+        },
+        {
+          "customer_id": "N09",
+          "group": "normal",
+          "label": 0,
+          "score": 12.8,
+          "flagged": false
+        },
+        {
+          "customer_id": "N10",
+          "group": "normal",
+          "label": 0,
+          "score": 1.93,
+          "flagged": false
+        },
+        {
+          "customer_id": "N11",
+          "group": "normal",
+          "label": 0,
+          "score": 15.68,
+          "flagged": false
+        },
+        {
+          "customer_id": "N12",
+          "group": "normal",
+          "label": 0,
+          "score": 7.35,
+          "flagged": false
+        },
+        {
+          "customer_id": "N13",
+          "group": "normal",
+          "label": 0,
+          "score": 7.42,
+          "flagged": false
+        },
+        {
+          "customer_id": "N14",
+          "group": "normal",
+          "label": 0,
+          "score": 19.25,
+          "flagged": false
+        },
+        {
+          "customer_id": "N15",
+          "group": "normal",
+          "label": 0,
+          "score": 1.4,
+          "flagged": false
+        },
+        {
+          "customer_id": "N16",
+          "group": "normal",
+          "label": 0,
+          "score": 11.05,
+          "flagged": false
+        },
+        {
+          "customer_id": "D01",
+          "group": "legit_drift",
+          "label": 0,
+          "score": 55.92,
+          "flagged": true
+        },
+        {
+          "customer_id": "D02",
+          "group": "legit_drift",
+          "label": 0,
+          "score": 51.4,
+          "flagged": true
+        },
+        {
+          "customer_id": "D03",
+          "group": "legit_drift",
+          "label": 0,
+          "score": 64.88,
+          "flagged": true
+        },
+        {
+          "customer_id": "D04",
+          "group": "legit_drift",
+          "label": 0,
+          "score": 58.85,
+          "flagged": true
+        },
+        {
+          "customer_id": "H01",
+          "group": "household",
+          "label": 0,
+          "score": 1.12,
+          "flagged": false
+        },
+        {
+          "customer_id": "H02",
+          "group": "household",
+          "label": 0,
+          "score": 1.95,
+          "flagged": false
+        },
+        {
+          "customer_id": "H03",
+          "group": "household",
+          "label": 0,
+          "score": 7.17,
+          "flagged": false
+        },
+        {
+          "customer_id": "H04",
+          "group": "household",
+          "label": 0,
+          "score": 18.02,
+          "flagged": false
+        },
+        {
+          "customer_id": "P01",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 3.67,
+          "flagged": false
+        },
+        {
+          "customer_id": "P02",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 2.38,
+          "flagged": false
+        },
+        {
+          "customer_id": "P03",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 1.35,
+          "flagged": false
+        },
+        {
+          "customer_id": "P04",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 11.15,
+          "flagged": false
+        },
+        {
+          "customer_id": "P05",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 14.28,
+          "flagged": false
+        },
+        {
+          "customer_id": "P06",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 5.07,
+          "flagged": false
+        },
+        {
+          "customer_id": "K01",
+          "group": "public_terminal",
+          "label": 0,
+          "score": 5.83,
+          "flagged": false
+        },
+        {
+          "customer_id": "K02",
+          "group": "public_terminal",
+          "label": 0,
+          "score": 12.75,
+          "flagged": false
+        },
+        {
+          "customer_id": "K03",
+          "group": "public_terminal",
+          "label": 0,
+          "score": 10.78,
+          "flagged": false
+        },
+        {
+          "customer_id": "C1",
+          "group": "ring1_household",
+          "label": 0,
+          "score": 10.82,
+          "flagged": false
+        },
+        {
+          "customer_id": "A1",
+          "group": "ring1",
+          "label": 1,
+          "score": 60.88,
+          "flagged": true
+        },
+        {
+          "customer_id": "B1",
+          "group": "ring1",
+          "label": 1,
+          "score": 73.22,
+          "flagged": true
+        },
+        {
+          "customer_id": "E2",
+          "group": "ring2",
+          "label": 1,
+          "score": 73.92,
+          "flagged": true
+        },
+        {
+          "customer_id": "F2",
+          "group": "ring2",
+          "label": 1,
+          "score": 64.7,
+          "flagged": true
+        },
+        {
+          "customer_id": "G2",
+          "group": "ring2",
+          "label": 1,
+          "score": 72.78,
+          "flagged": true
+        },
+        {
+          "customer_id": "A3",
+          "group": "ring3",
+          "label": 1,
+          "score": 52.48,
+          "flagged": true
+        },
+        {
+          "customer_id": "B3",
+          "group": "ring3",
+          "label": 1,
+          "score": 70.83,
+          "flagged": true
+        },
+        {
+          "customer_id": "C3",
+          "group": "ring3",
+          "label": 1,
+          "score": 61.12,
+          "flagged": true
+        }
+      ]
+    },
+    "naive_shared_infrastructure": {
+      "description": "Flag if ANY device or IP is shared with another customer (no discounting).",
+      "tp": 8,
+      "fp": 14,
+      "fn": 0,
+      "tn": 20,
+      "precision": 0.3636,
+      "recall": 1.0,
+      "f1": 0.5333,
+      "false_positive_rate": 0.4118,
+      "roc_auc": 0.7941,
+      "false_positives_by_group": {
+        "household": 4,
+        "public_wifi": 6,
+        "public_terminal": 3,
+        "ring1_household": 1
+      },
+      "latency_ms_mean": 1.06,
+      "latency_ms_p95": 1.53,
+      "per_case": [
+        {
+          "customer_id": "N01",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N02",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N03",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N04",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N05",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N06",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N07",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N08",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N09",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N10",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N11",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N12",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N13",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N14",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N15",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N16",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "D01",
+          "group": "legit_drift",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "D02",
+          "group": "legit_drift",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "D03",
+          "group": "legit_drift",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "D04",
+          "group": "legit_drift",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "H01",
+          "group": "household",
+          "label": 0,
+          "score": 100.0,
+          "flagged": true
+        },
+        {
+          "customer_id": "H02",
+          "group": "household",
+          "label": 0,
+          "score": 100.0,
+          "flagged": true
+        },
+        {
+          "customer_id": "H03",
+          "group": "household",
+          "label": 0,
+          "score": 100.0,
+          "flagged": true
+        },
+        {
+          "customer_id": "H04",
+          "group": "household",
+          "label": 0,
+          "score": 100.0,
+          "flagged": true
+        },
+        {
+          "customer_id": "P01",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 100.0,
+          "flagged": true
+        },
+        {
+          "customer_id": "P02",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 100.0,
+          "flagged": true
+        },
+        {
+          "customer_id": "P03",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 100.0,
+          "flagged": true
+        },
+        {
+          "customer_id": "P04",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 100.0,
+          "flagged": true
+        },
+        {
+          "customer_id": "P05",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 100.0,
+          "flagged": true
+        },
+        {
+          "customer_id": "P06",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 100.0,
+          "flagged": true
+        },
+        {
+          "customer_id": "K01",
+          "group": "public_terminal",
+          "label": 0,
+          "score": 100.0,
+          "flagged": true
+        },
+        {
+          "customer_id": "K02",
+          "group": "public_terminal",
+          "label": 0,
+          "score": 100.0,
+          "flagged": true
+        },
+        {
+          "customer_id": "K03",
+          "group": "public_terminal",
+          "label": 0,
+          "score": 100.0,
+          "flagged": true
+        },
+        {
+          "customer_id": "C1",
+          "group": "ring1_household",
+          "label": 0,
+          "score": 100.0,
+          "flagged": true
+        },
+        {
+          "customer_id": "A1",
+          "group": "ring1",
+          "label": 1,
+          "score": 100.0,
+          "flagged": true
+        },
+        {
+          "customer_id": "B1",
+          "group": "ring1",
+          "label": 1,
+          "score": 100.0,
+          "flagged": true
+        },
+        {
+          "customer_id": "E2",
+          "group": "ring2",
+          "label": 1,
+          "score": 100.0,
+          "flagged": true
+        },
+        {
+          "customer_id": "F2",
+          "group": "ring2",
+          "label": 1,
+          "score": 100.0,
+          "flagged": true
+        },
+        {
+          "customer_id": "G2",
+          "group": "ring2",
+          "label": 1,
+          "score": 100.0,
+          "flagged": true
+        },
+        {
+          "customer_id": "A3",
+          "group": "ring3",
+          "label": 1,
+          "score": 100.0,
+          "flagged": true
+        },
+        {
+          "customer_id": "B3",
+          "group": "ring3",
+          "label": 1,
+          "score": 100.0,
+          "flagged": true
+        },
+        {
+          "customer_id": "C3",
+          "group": "ring3",
+          "label": 1,
+          "score": 100.0,
+          "flagged": true
+        }
+      ]
+    },
+    "graph_no_traversal": {
+      "description": "Graph-assisted agent, traversal limited to 0 customer hop(s) (profile context and mitigations only)",
+      "tp": 0,
+      "fp": 0,
+      "fn": 8,
+      "tn": 34,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "false_positive_rate": 0.0,
+      "roc_auc": 1.0,
+      "false_positives_by_group": {},
+      "latency_ms_mean": 5.46,
+      "latency_ms_p95": 8.68,
+      "per_case": [
+        {
+          "customer_id": "N01",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N02",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N03",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N04",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N05",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N06",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N07",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N08",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N09",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N10",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N11",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N12",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N13",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N14",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N15",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N16",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "D01",
+          "group": "legit_drift",
+          "label": 0,
+          "score": 7.37,
+          "flagged": false
+        },
+        {
+          "customer_id": "D02",
+          "group": "legit_drift",
+          "label": 0,
+          "score": 5.56,
+          "flagged": false
+        },
+        {
+          "customer_id": "D03",
+          "group": "legit_drift",
+          "label": 0,
+          "score": 10.95,
+          "flagged": false
+        },
+        {
+          "customer_id": "D04",
+          "group": "legit_drift",
+          "label": 0,
+          "score": 8.54,
+          "flagged": false
+        },
+        {
+          "customer_id": "H01",
+          "group": "household",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "H02",
+          "group": "household",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "H03",
+          "group": "household",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "H04",
+          "group": "household",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "P01",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "P02",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "P03",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "P04",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "P05",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "P06",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 2.03,
+          "flagged": false
+        },
+        {
+          "customer_id": "K01",
+          "group": "public_terminal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "K02",
+          "group": "public_terminal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "K03",
+          "group": "public_terminal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "C1",
+          "group": "ring1_household",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "A1",
+          "group": "ring1",
+          "label": 1,
+          "score": 24.35,
+          "flagged": false
+        },
+        {
+          "customer_id": "B1",
+          "group": "ring1",
+          "label": 1,
+          "score": 29.29,
+          "flagged": false
+        },
+        {
+          "customer_id": "E2",
+          "group": "ring2",
+          "label": 1,
+          "score": 29.57,
+          "flagged": false
+        },
+        {
+          "customer_id": "F2",
+          "group": "ring2",
+          "label": 1,
+          "score": 25.88,
+          "flagged": false
+        },
+        {
+          "customer_id": "G2",
+          "group": "ring2",
+          "label": 1,
+          "score": 29.11,
+          "flagged": false
+        },
+        {
+          "customer_id": "A3",
+          "group": "ring3",
+          "label": 1,
+          "score": 20.99,
+          "flagged": false
+        },
+        {
+          "customer_id": "B3",
+          "group": "ring3",
+          "label": 1,
+          "score": 28.33,
+          "flagged": false
+        },
+        {
+          "customer_id": "C3",
+          "group": "ring3",
+          "label": 1,
+          "score": 24.45,
+          "flagged": false
+        }
+      ]
+    },
+    "graph_1_hop": {
+      "description": "Graph-assisted agent, traversal limited to 1 customer hop(s)",
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "tn": 34,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_positive_rate": 0.0,
+      "roc_auc": 1.0,
+      "false_positives_by_group": {},
+      "latency_ms_mean": 12.06,
+      "latency_ms_p95": 24.44,
+      "per_case": [
+        {
+          "customer_id": "N01",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N02",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N03",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N04",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N05",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N06",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N07",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N08",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N09",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N10",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N11",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N12",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N13",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N14",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N15",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N16",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "D01",
+          "group": "legit_drift",
+          "label": 0,
+          "score": 7.37,
+          "flagged": false
+        },
+        {
+          "customer_id": "D02",
+          "group": "legit_drift",
+          "label": 0,
+          "score": 5.56,
+          "flagged": false
+        },
+        {
+          "customer_id": "D03",
+          "group": "legit_drift",
+          "label": 0,
+          "score": 10.95,
+          "flagged": false
+        },
+        {
+          "customer_id": "D04",
+          "group": "legit_drift",
+          "label": 0,
+          "score": 8.54,
+          "flagged": false
+        },
+        {
+          "customer_id": "H01",
+          "group": "household",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "H02",
+          "group": "household",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "H03",
+          "group": "household",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "H04",
+          "group": "household",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "P01",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "P02",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "P03",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "P04",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "P05",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "P06",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 2.03,
+          "flagged": false
+        },
+        {
+          "customer_id": "K01",
+          "group": "public_terminal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "K02",
+          "group": "public_terminal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "K03",
+          "group": "public_terminal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "C1",
+          "group": "ring1_household",
+          "label": 0,
+          "score": 9.33,
+          "flagged": false
+        },
+        {
+          "customer_id": "A1",
+          "group": "ring1",
+          "label": 1,
+          "score": 54.35,
+          "flagged": true
+        },
+        {
+          "customer_id": "B1",
+          "group": "ring1",
+          "label": 1,
+          "score": 59.29,
+          "flagged": true
+        },
+        {
+          "customer_id": "E2",
+          "group": "ring2",
+          "label": 1,
+          "score": 64.57,
+          "flagged": true
+        },
+        {
+          "customer_id": "F2",
+          "group": "ring2",
+          "label": 1,
+          "score": 60.88,
+          "flagged": true
+        },
+        {
+          "customer_id": "G2",
+          "group": "ring2",
+          "label": 1,
+          "score": 64.11,
+          "flagged": true
+        },
+        {
+          "customer_id": "A3",
+          "group": "ring3",
+          "label": 1,
+          "score": 50.99,
+          "flagged": true
+        },
+        {
+          "customer_id": "B3",
+          "group": "ring3",
+          "label": 1,
+          "score": 78.33,
+          "flagged": true
+        },
+        {
+          "customer_id": "C3",
+          "group": "ring3",
+          "label": 1,
+          "score": 54.45,
+          "flagged": true
+        }
+      ]
+    },
+    "graph_assisted_2_hops": {
+      "description": "Graph-assisted agent, traversal limited to 2 customer hop(s)",
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "tn": 34,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_positive_rate": 0.0,
+      "roc_auc": 1.0,
+      "false_positives_by_group": {},
+      "latency_ms_mean": 15.44,
+      "latency_ms_p95": 31.82,
+      "per_case": [
+        {
+          "customer_id": "N01",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N02",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N03",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N04",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N05",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N06",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N07",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N08",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N09",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N10",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N11",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N12",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N13",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N14",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N15",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "N16",
+          "group": "normal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "D01",
+          "group": "legit_drift",
+          "label": 0,
+          "score": 7.37,
+          "flagged": false
+        },
+        {
+          "customer_id": "D02",
+          "group": "legit_drift",
+          "label": 0,
+          "score": 5.56,
+          "flagged": false
+        },
+        {
+          "customer_id": "D03",
+          "group": "legit_drift",
+          "label": 0,
+          "score": 10.95,
+          "flagged": false
+        },
+        {
+          "customer_id": "D04",
+          "group": "legit_drift",
+          "label": 0,
+          "score": 8.54,
+          "flagged": false
+        },
+        {
+          "customer_id": "H01",
+          "group": "household",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "H02",
+          "group": "household",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "H03",
+          "group": "household",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "H04",
+          "group": "household",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "P01",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "P02",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "P03",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "P04",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "P05",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "P06",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 2.03,
+          "flagged": false
+        },
+        {
+          "customer_id": "K01",
+          "group": "public_terminal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "K02",
+          "group": "public_terminal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "K03",
+          "group": "public_terminal",
+          "label": 0,
+          "score": 0.0,
+          "flagged": false
+        },
+        {
+          "customer_id": "C1",
+          "group": "ring1_household",
+          "label": 0,
+          "score": 9.33,
+          "flagged": false
+        },
+        {
+          "customer_id": "A1",
+          "group": "ring1",
+          "label": 1,
+          "score": 54.35,
+          "flagged": true
+        },
+        {
+          "customer_id": "B1",
+          "group": "ring1",
+          "label": 1,
+          "score": 59.29,
+          "flagged": true
+        },
+        {
+          "customer_id": "E2",
+          "group": "ring2",
+          "label": 1,
+          "score": 64.57,
+          "flagged": true
+        },
+        {
+          "customer_id": "F2",
+          "group": "ring2",
+          "label": 1,
+          "score": 60.88,
+          "flagged": true
+        },
+        {
+          "customer_id": "G2",
+          "group": "ring2",
+          "label": 1,
+          "score": 64.11,
+          "flagged": true
+        },
+        {
+          "customer_id": "A3",
+          "group": "ring3",
+          "label": 1,
+          "score": 70.99,
+          "flagged": true
+        },
+        {
+          "customer_id": "B3",
+          "group": "ring3",
+          "label": 1,
+          "score": 78.33,
+          "flagged": true
+        },
+        {
+          "customer_id": "C3",
+          "group": "ring3",
+          "label": 1,
+          "score": 74.45,
+          "flagged": true
+        }
+      ]
+    },
+    "graph_2_hops_no_mitigations": {
+      "description": "Ablation: 2 hops but the benign-context mitigations (tenure, household) are switched off.",
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "tn": 34,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_positive_rate": 0.0,
+      "roc_auc": 1.0,
+      "false_positives_by_group": {},
+      "latency_ms_mean": 15.9,
+      "latency_ms_p95": 33.6,
+      "per_case": [
+        {
+          "customer_id": "N01",
+          "group": "normal",
+          "label": 0,
+          "score": 4.66,
+          "flagged": false
+        },
+        {
+          "customer_id": "N02",
+          "group": "normal",
+          "label": 0,
+          "score": 1.65,
+          "flagged": false
+        },
+        {
+          "customer_id": "N03",
+          "group": "normal",
+          "label": 0,
+          "score": 8.87,
+          "flagged": false
+        },
+        {
+          "customer_id": "N04",
+          "group": "normal",
+          "label": 0,
+          "score": 5.33,
+          "flagged": false
+        },
+        {
+          "customer_id": "N05",
+          "group": "normal",
+          "label": 0,
+          "score": 3.81,
+          "flagged": false
+        },
+        {
+          "customer_id": "N06",
+          "group": "normal",
+          "label": 0,
+          "score": 4.56,
+          "flagged": false
+        },
+        {
+          "customer_id": "N07",
+          "group": "normal",
+          "label": 0,
+          "score": 11.01,
+          "flagged": false
+        },
+        {
+          "customer_id": "N08",
+          "group": "normal",
+          "label": 0,
+          "score": 3.32,
+          "flagged": false
+        },
+        {
+          "customer_id": "N09",
+          "group": "normal",
+          "label": 0,
+          "score": 5.12,
+          "flagged": false
+        },
+        {
+          "customer_id": "N10",
+          "group": "normal",
+          "label": 0,
+          "score": 0.77,
+          "flagged": false
+        },
+        {
+          "customer_id": "N11",
+          "group": "normal",
+          "label": 0,
+          "score": 6.27,
+          "flagged": false
+        },
+        {
+          "customer_id": "N12",
+          "group": "normal",
+          "label": 0,
+          "score": 2.94,
+          "flagged": false
+        },
+        {
+          "customer_id": "N13",
+          "group": "normal",
+          "label": 0,
+          "score": 2.97,
+          "flagged": false
+        },
+        {
+          "customer_id": "N14",
+          "group": "normal",
+          "label": 0,
+          "score": 7.7,
+          "flagged": false
+        },
+        {
+          "customer_id": "N15",
+          "group": "normal",
+          "label": 0,
+          "score": 0.56,
+          "flagged": false
+        },
+        {
+          "customer_id": "N16",
+          "group": "normal",
+          "label": 0,
+          "score": 4.42,
+          "flagged": false
+        },
+        {
+          "customer_id": "D01",
+          "group": "legit_drift",
+          "label": 0,
+          "score": 22.37,
+          "flagged": false
+        },
+        {
+          "customer_id": "D02",
+          "group": "legit_drift",
+          "label": 0,
+          "score": 20.56,
+          "flagged": false
+        },
+        {
+          "customer_id": "D03",
+          "group": "legit_drift",
+          "label": 0,
+          "score": 25.95,
+          "flagged": false
+        },
+        {
+          "customer_id": "D04",
+          "group": "legit_drift",
+          "label": 0,
+          "score": 23.54,
+          "flagged": false
+        },
+        {
+          "customer_id": "H01",
+          "group": "household",
+          "label": 0,
+          "score": 0.45,
+          "flagged": false
+        },
+        {
+          "customer_id": "H02",
+          "group": "household",
+          "label": 0,
+          "score": 0.78,
+          "flagged": false
+        },
+        {
+          "customer_id": "H03",
+          "group": "household",
+          "label": 0,
+          "score": 2.87,
+          "flagged": false
+        },
+        {
+          "customer_id": "H04",
+          "group": "household",
+          "label": 0,
+          "score": 7.21,
+          "flagged": false
+        },
+        {
+          "customer_id": "P01",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 1.47,
+          "flagged": false
+        },
+        {
+          "customer_id": "P02",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 0.95,
+          "flagged": false
+        },
+        {
+          "customer_id": "P03",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 0.54,
+          "flagged": false
+        },
+        {
+          "customer_id": "P04",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 4.46,
+          "flagged": false
+        },
+        {
+          "customer_id": "P05",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 5.71,
+          "flagged": false
+        },
+        {
+          "customer_id": "P06",
+          "group": "public_wifi",
+          "label": 0,
+          "score": 2.03,
+          "flagged": false
+        },
+        {
+          "customer_id": "K01",
+          "group": "public_terminal",
+          "label": 0,
+          "score": 2.33,
+          "flagged": false
+        },
+        {
+          "customer_id": "K02",
+          "group": "public_terminal",
+          "label": 0,
+          "score": 5.1,
+          "flagged": false
+        },
+        {
+          "customer_id": "K03",
+          "group": "public_terminal",
+          "label": 0,
+          "score": 4.31,
+          "flagged": false
+        },
+        {
+          "customer_id": "C1",
+          "group": "ring1_household",
+          "label": 0,
+          "score": 24.33,
+          "flagged": false
+        },
+        {
+          "customer_id": "A1",
+          "group": "ring1",
+          "label": 1,
+          "score": 54.35,
+          "flagged": true
+        },
+        {
+          "customer_id": "B1",
+          "group": "ring1",
+          "label": 1,
+          "score": 59.29,
+          "flagged": true
+        },
+        {
+          "customer_id": "E2",
+          "group": "ring2",
+          "label": 1,
+          "score": 64.57,
+          "flagged": true
+        },
+        {
+          "customer_id": "F2",
+          "group": "ring2",
+          "label": 1,
+          "score": 60.88,
+          "flagged": true
+        },
+        {
+          "customer_id": "G2",
+          "group": "ring2",
+          "label": 1,
+          "score": 64.11,
+          "flagged": true
+        },
+        {
+          "customer_id": "A3",
+          "group": "ring3",
+          "label": 1,
+          "score": 70.99,
+          "flagged": true
+        },
+        {
+          "customer_id": "B3",
+          "group": "ring3",
+          "label": 1,
+          "score": 78.33,
+          "flagged": true
+        },
+        {
+          "customer_id": "C3",
+          "group": "ring3",
+          "label": 1,
+          "score": 74.45,
+          "flagged": true
+        }
+      ]
+    },
+    "path_discovery_1_hop": {
+      "all_expected_counterparts_found": 6,
+      "cases": 8,
+      "rate": 0.75
+    },
+    "path_discovery_2_hop": {
+      "all_expected_counterparts_found": 8,
+      "cases": 8,
+      "rate": 1.0
+    }
+  },
+  "memory": {
+    "same_target_retrieval": {
+      "correct": 8,
+      "cases": 8
+    },
+    "related_entity_retrieval": {
+      "correct": 5,
+      "cases": 5
+    }
+  },
+  "conclusion_update": {
+    "before": {
+      "score": 54.35,
+      "band": "medium"
+    },
+    "after": {
+      "score": 74.35,
+      "band": "high"
+    },
+    "conclusion_changed": true,
+    "new_events_reported": 1,
+    "new_link_evidence": true,
+    "expected": "band moves up (medium -> high) because dormant account D1 appears on device X with the same coupon",
+    "passed": true
+  },
+  "path_discovery_rows": [
+    {
+      "hops": 1,
+      "customer_id": "A1",
+      "expected": [
+        "B1"
+      ],
+      "found": [
+        "B1",
+        "C1"
+      ],
+      "all_found": true,
+      "min_hops_needed": 1
+    },
+    {
+      "hops": 1,
+      "customer_id": "B1",
+      "expected": [
+        "A1"
+      ],
+      "found": [
+        "A1",
+        "C1"
+      ],
+      "all_found": true,
+      "min_hops_needed": 1
+    },
+    {
+      "hops": 1,
+      "customer_id": "E2",
+      "expected": [
+        "F2",
+        "G2"
+      ],
+      "found": [
+        "F2",
+        "G2"
+      ],
+      "all_found": true,
+      "min_hops_needed": 1
+    },
+    {
+      "hops": 1,
+      "customer_id": "F2",
+      "expected": [
+        "E2",
+        "G2"
+      ],
+      "found": [
+        "E2",
+        "G2"
+      ],
+      "all_found": true,
+      "min_hops_needed": 1
+    },
+    {
+      "hops": 1,
+      "customer_id": "G2",
+      "expected": [
+        "E2",
+        "F2"
+      ],
+      "found": [
+        "E2",
+        "F2"
+      ],
+      "all_found": true,
+      "min_hops_needed": 1
+    },
+    {
+      "hops": 1,
+      "customer_id": "A3",
+      "expected": [
+        "B3",
+        "C3"
+      ],
+      "found": [
+        "B3"
+      ],
+      "all_found": false,
+      "min_hops_needed": 2
+    },
+    {
+      "hops": 1,
+      "customer_id": "B3",
+      "expected": [
+        "A3",
+        "C3"
+      ],
+      "found": [
+        "A3",
+        "C3"
+      ],
+      "all_found": true,
+      "min_hops_needed": 1
+    },
+    {
+      "hops": 1,
+      "customer_id": "C3",
+      "expected": [
+        "A3",
+        "B3"
+      ],
+      "found": [
+        "B3"
+      ],
+      "all_found": false,
+      "min_hops_needed": 2
+    },
+    {
+      "hops": 2,
+      "customer_id": "A1",
+      "expected": [
+        "B1"
+      ],
+      "found": [
+        "B1",
+        "C1"
+      ],
+      "all_found": true,
+      "min_hops_needed": 1
+    },
+    {
+      "hops": 2,
+      "customer_id": "B1",
+      "expected": [
+        "A1"
+      ],
+      "found": [
+        "A1",
+        "C1"
+      ],
+      "all_found": true,
+      "min_hops_needed": 1
+    },
+    {
+      "hops": 2,
+      "customer_id": "E2",
+      "expected": [
+        "F2",
+        "G2"
+      ],
+      "found": [
+        "F2",
+        "G2"
+      ],
+      "all_found": true,
+      "min_hops_needed": 1
+    },
+    {
+      "hops": 2,
+      "customer_id": "F2",
+      "expected": [
+        "E2",
+        "G2"
+      ],
+      "found": [
+        "E2",
+        "G2"
+      ],
+      "all_found": true,
+      "min_hops_needed": 1
+    },
+    {
+      "hops": 2,
+      "customer_id": "G2",
+      "expected": [
+        "E2",
+        "F2"
+      ],
+      "found": [
+        "E2",
+        "F2"
+      ],
+      "all_found": true,
+      "min_hops_needed": 1
+    },
+    {
+      "hops": 2,
+      "customer_id": "A3",
+      "expected": [
+        "B3",
+        "C3"
+      ],
+      "found": [
+        "B3",
+        "C3"
+      ],
+      "all_found": true,
+      "min_hops_needed": 2
+    },
+    {
+      "hops": 2,
+      "customer_id": "B3",
+      "expected": [
+        "A3",
+        "C3"
+      ],
+      "found": [
+        "A3",
+        "C3"
+      ],
+      "all_found": true,
+      "min_hops_needed": 1
+    },
+    {
+      "hops": 2,
+      "customer_id": "C3",
+      "expected": [
+        "A3",
+        "B3"
+      ],
+      "found": [
+        "A3",
+        "B3"
+      ],
+      "all_found": true,
+      "min_hops_needed": 2
+    }
+  ],
+  "caveats": [
+    "Synthetic data authored by the project author; planted rings and hard negatives are by construction.",
+    "Only 8 positive cases: metrics have wide uncertainty and must not be read as real-world accuracy.",
+    "Weights were set by hand and sanity-checked on this same scenario (in-sample)."
+  ],
+  "result_hash": "f4eaf71eb2b09e48"
+}

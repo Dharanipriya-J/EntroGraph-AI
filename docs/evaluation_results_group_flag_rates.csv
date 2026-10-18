@@ -1,0 +1,10 @@
+group,graph_1_hop,graph_2_hops_no_mitigations,graph_assisted_2_hops,graph_no_traversal,isolated_baseline,naive_shared_infrastructure
+household,0.0,0.0,0.0,0.0,0.0,1.0
+legit_drift,0.0,0.0,0.0,0.0,1.0,0.0
+normal,0.0,0.0,0.0,0.0,0.0,0.0
+public_terminal,0.0,0.0,0.0,0.0,0.0,1.0
+public_wifi,0.0,0.0,0.0,0.0,0.0,1.0
+ring1,1.0,1.0,1.0,0.0,1.0,1.0
+ring1_household,0.0,0.0,0.0,0.0,0.0,1.0
+ring2,1.0,1.0,1.0,0.0,1.0,1.0
+ring3,1.0,1.0,1.0,0.0,1.0,1.0

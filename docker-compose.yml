@@ -1,0 +1,30 @@
+services:
+  falkordb:
+    image: falkordb/falkordb:latest          # database on 6379, FalkorDB Browser on http://localhost:3000
+    ports:
+      - "6379:6379"
+      - "3000:3000"
+    environment:
+      - REDIS_ARGS=--appendonly yes          # AOF persistence so investigation memory survives restarts
+    volumes:
+      - falkordb_data:/var/lib/falkordb/data
+    restart: unless-stopped
+
+  api:
+    build: .
+    depends_on:
+      - falkordb
+    environment:
+      - FALKORDB_MODE=server
+      - FALKORDB_HOST=falkordb
+      - FALKORDB_PORT=6379
+      - GRAPH_NAME=entrograph
+      - AUTO_LOAD_SCENARIO=true
+      - ENTROGRAPH_LLM=${ENTROGRAPH_LLM:-deterministic}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+volumes:
+  falkordb_data:

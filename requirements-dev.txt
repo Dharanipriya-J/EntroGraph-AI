@@ -1,0 +1,5 @@
+-r requirements.txt
+pytest>=8.0
+# Embedded FalkorDB engine: lets tests and a Docker-free demo run a REAL FalkorDB inside Python.
+# macOS wheel exists for Intel and for Apple Silicon on macOS 15+; otherwise use Docker.
+falkordblite>=0.9
