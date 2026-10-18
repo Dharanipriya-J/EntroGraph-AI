@@ -4,12 +4,6 @@
 
 > A graph-native investigation agent for synthetic e-commerce activity. It connects customers, sessions, devices, IPs, products, orders, coupons and its own past investigations in FalkorDB, then investigates unusual behaviour by traversing the graph, weighing supporting / contradicting / missing evidence, and remembering what it concluded.
 
-| Item | Status |
-|---|---|
-| Public GitHub repository | **PENDING** (publish this folder, then add the link here) |
-| Demo video | **PENDING** (record following `DEMO_SCRIPT.md`, then add the link here) |
-| Live deployment | none — complete local setup below |
-| Official rules | https://www.wemakedevs.org/hackathons/falkordb/rules |
 
 ## Problem statement
 
